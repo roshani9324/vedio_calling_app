@@ -4,8 +4,9 @@ import { APP_ID, SERVER_SECRET } from "./Constants";
 
 function VideoPages() {
   const { id } = useParams();
+  console.log(id);
   const roomID = id;
-
+console.log("Room ID:", id);
   let myMeeting = async (element) => {
     // generate Kit Token
     const appID = APP_ID;
