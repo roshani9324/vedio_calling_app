@@ -22,20 +22,16 @@ console.log("Room ID:", id);
     // start the call
     zp.joinRoom({
       container: element,
+
       sharedLinks: [
         {
-          name: "Personal link",
-          url:
-            window.location.protocol +
-            "//" +
-            window.location.host +
-            window.location.pathname +
-            "?roomID=" +
-            roomID,
+          name: "Meeting Link",
+          url: `${window.location.origin}/room/${roomID}`,
         },
       ],
+
       scenario: {
-        mode: ZegoUIKitPrebuilt.OneONoneCall, // To implement 1-on-1 calls, modify the parameter here to [ZegoUIKitPrebuilt.OneONoneCall].
+        mode: ZegoUIKitPrebuilt.OneONoneCall,
       },
     });
   };
